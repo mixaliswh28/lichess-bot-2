@@ -19,7 +19,7 @@ engine:                      # Engine settings.
 #     etc.
 #     Use the same pattern for 'giveaway' (antichess), 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
     min_weight: 1            # Does not select moves with weight below min_weight (min 0, max: 65535).
-    selection: "weighted_random" # Move selection is one of "weighted_random", "uniform_random" or "best_move" (but not below the min_weight in the 2nd and 3rd case).
+    selection: "best_move" # Move selection is one of "weighted_random", "uniform_random" or "best_move" (but not below the min_weight in the 2nd and 3rd case).
     max_depth: 8             # Half move max depth.
   draw_or_resign:
     resign_enabled: false
@@ -35,7 +35,7 @@ engine:                      # Engine settings.
     chessdb_book:
       enabled: true
       min_time: 20
-      move_quality: "good"   # One of "all", "good", "best".
+      move_quality: "best"   # One of "all", "good", "best".
       min_depth: 20          # Only for move_quality: "best".
       contribute: true
     lichess_cloud_analysis:
@@ -57,7 +57,7 @@ engine:                      # Engine settings.
 #   Hash: 256
   uci_options:               # Arbitrary UCI options passed to the engine.
     Move Overhead: 200       # Increase if your bot flags games too often.
-    Threads: 2               # Max CPU threads the engine can use.
+    Threads: 1               # Max CPU threads the engine can use.
     Hash: 256                # Max memory (in megabytes) the engine can allocate.
 #   go_commands:             # Additional options to pass to the UCI go command.
 #     nodes: 1               # Search so many nodes only.
