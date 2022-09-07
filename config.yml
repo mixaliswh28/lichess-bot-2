@@ -8,7 +8,7 @@ engine:                      # Engine settings.
   protocol: "uci"            # "uci" or "xboard"
   ponder: true               # Think on opponent's time.
   polyglot:
-    enabled: true            # Activate polyglot book.
+    enabled: false             # Activate polyglot book.
     book:
       standard:              # List of book file paths for variant standard.
         - engines/books/Goi5.1.bin
@@ -33,7 +33,7 @@ engine:                      # Engine settings.
     offer_draw_pieces: 10    # Only if the pieces on board are less than or equal to this value, the bot offers/accepts draw.
   online_moves:
     chessdb_book:
-      enabled: false
+      enabled: true
       min_time: 20
       move_quality: "best"   # One of "all", "good", "best".
       min_depth: 20          # Only for move_quality: "best".
